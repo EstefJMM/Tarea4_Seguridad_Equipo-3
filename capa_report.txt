@@ -1,0 +1,51 @@
+┌─────────────┬────────────────────────────────────────────────────────────────────────────────────┐
+│ md5         │ 4e279cf7d61eeb6075fb223d44a3dfc3                                                   │
+│ sha1        │ b9398e8135570b1ade13f49110220a727c5ab100                                           │
+│ sha256      │ fa016c3bfc30fc9946aa6d52e891c8305601ac87f8c60a5e5582eba4a38c4359                   │
+│ analysis    │ static                                                                             │
+│ os          │ windows                                                                            │
+│ format      │ pe                                                                                 │
+│ arch        │ i386                                                                               │
+│ path        │ C:/Users/UserPrueba/Documents/Tarea 4/team_payload.exe                             │
+└─────────────┴────────────────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────┬───────────────────────────────────────────────────────────────────────────┐
+│ ATT&CK Tactic        │ ATT&CK Technique                                                          │
+├──────────────────────┼───────────────────────────────────────────────────────────────────────────┤
+│ DEFENSE EVASION      │ Obfuscated Files or Information::Indicator Removal from Tools [T1027.005] │
+│ DISCOVERY            │ File and Directory Discovery [T1083]                                      │
+│                      │ System Information Discovery [T1082]                                      │
+│                      │ System Location Discovery [T1614]                                         │
+│ EXECUTION            │ Shared Modules [T1129]                                                    │
+└──────────────────────┴───────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────┬───────────────────────────────────────────────────────────────────────┐
+│ MBC Objective            │ MBC Behavior                                                          │
+├──────────────────────────┼───────────────────────────────────────────────────────────────────────┤
+│ ANTI-STATIC ANALYSIS     │ Executable Code Obfuscation::Argument Obfuscation [B0032.020]         │
+│                          │ Executable Code Obfuscation::Stack Strings [B0032.017]                │
+│ DISCOVERY                │ Analysis Tool Discovery::Process detection [B0013.001]                │
+│                          │ Code Discovery::Enumerate PE Sections [B0046.001]                     │
+│                          │ File and Directory Discovery [E1083]                                  │
+│                          │ System Information Discovery [E1082]                                  │
+│ FILE SYSTEM              │ Read File [C0051]                                                     │
+│                          │ Writes File [C0052]                                                   │
+│ MEMORY                   │ Allocate Memory [C0007]                                               │
+│ PROCESS                  │ Terminate Process [C0018]                                             │
+└──────────────────────────┴───────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────┬──────────────────────────────────────────────┐
+│ Capability                                        │ Namespace                                    │
+├───────────────────────────────────────────────────┼──────────────────────────────────────────────┤
+│ reference analysis tools strings                  │ anti-analysis                                │
+│ contain obfuscated stackstrings                   │ anti-analysis/obfuscation/string/stackstring │
+│ get geographical location (4 matches)             │ collection                                   │
+│ query environment variable                        │ host-interaction/environment-variable        │
+│ enumerate files on Windows                        │ host-interaction/file-system/files/list      │
+│ get file size                                     │ host-interaction/file-system/meta            │
+│ read file on Windows (5 matches)                  │ host-interaction/file-system/read            │
+│ write file on Windows (2 matches)                 │ host-interaction/file-system/write           │
+│ allocate or change RWX memory                     │ host-interaction/process/inject              │
+│ terminate process                                 │ host-interaction/process/terminate           │
+│ link function at runtime on Windows (2 matches)   │ linking/runtime-linking                      │
+│ enumerate PE sections                             │ load-code/pe                                 │
+│ parse PE header (3 matches)                       │ load-code/pe                                 │
+└───────────────────────────────────────────────────┴──────────────────────────────────────────────┘
+
