@@ -8,7 +8,7 @@ Durante la ejecución en el depurador (x32dbg), se monitoreó el mapa de memoria
 * **Estado:** Privado (PRV).
 * **Propósito:** Esta región es utilizada para alojar el shellcode tras ser descifrado, permitiendo su ejecución directa desde la memoria RAM.
 
-(imagen 1)
+(imagen 1:88f3cb71-c4b1-4a19-83aa-0bff1b7261e2.jpg)
 
 ## 2. Proceso de Descifrado XOR
 El payload utiliza un algoritmo de descifrado XOR para ocultar sus funciones sensibles y evitar la detección estática simple. 
